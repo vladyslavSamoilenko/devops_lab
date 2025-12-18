@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ServerController {
     @GetMapping("/hello")
     public String sayHello() {
-        return "Привет от Сервера! Связь установлена.";
+        return "Hello from server.";
     }
 }
