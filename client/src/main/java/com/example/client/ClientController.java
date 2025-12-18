@@ -8,10 +8,10 @@ import org.springframework.web.client.RestTemplate;
 public class ClientController {
     private final RestTemplate restTemplate = new RestTemplate();
 
-    @GetMapping("/check")
+    @GetMapping("/ping-server")
     public String checkServer() {
         // ВАЖНО: Вместо localhost пишем имя сервиса из docker-compose (ниже)
-        String url = "http://my-server:8080/hello";
+        String url = "http://server-app:8080/hello";
         try {
             return restTemplate.getForObject(url, String.class);
         } catch (Exception e) {
